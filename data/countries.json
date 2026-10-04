@@ -1,0 +1,3147 @@
+[
+  {
+    "id": "AFG",
+    "name": "Afganistán",
+    "nameEn": "Afghanistan",
+    "capital": "Kabul",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "mapId": "AFG",
+    "mapNumericId": "004",
+    "coordinates": [
+      65,
+      33
+    ]
+  },
+  {
+    "id": "AGO",
+    "name": "Angola",
+    "nameEn": "Angola",
+    "capital": "Luanda",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "AO",
+    "iso3": "AGO",
+    "mapId": "AGO",
+    "mapNumericId": "024",
+    "coordinates": [
+      18.5,
+      -12.5
+    ]
+  },
+  {
+    "id": "ALB",
+    "name": "Albania",
+    "nameEn": "Albania",
+    "capital": "Tirana",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "AL",
+    "iso3": "ALB",
+    "mapId": "ALB",
+    "mapNumericId": "008",
+    "coordinates": [
+      20,
+      41
+    ]
+  },
+  {
+    "id": "AND",
+    "name": "Andorra",
+    "nameEn": "Andorra",
+    "capital": "Andorra la Vella",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "AD",
+    "iso3": "AND",
+    "mapId": "AND",
+    "mapNumericId": "020",
+    "coordinates": [
+      1.5,
+      42.5
+    ]
+  },
+  {
+    "id": "ARE",
+    "name": "Emiratos Árabes Unidos",
+    "nameEn": "United Arab Emirates",
+    "capital": "Abu Dabi",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "AE",
+    "iso3": "ARE",
+    "mapId": "ARE",
+    "mapNumericId": "784",
+    "coordinates": [
+      54,
+      24
+    ]
+  },
+  {
+    "id": "ARG",
+    "name": "Argentina",
+    "nameEn": "Argentina",
+    "capital": "Buenos Aires",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "AR",
+    "iso3": "ARG",
+    "mapId": "ARG",
+    "mapNumericId": "032",
+    "coordinates": [
+      -64,
+      -34
+    ]
+  },
+  {
+    "id": "ARM",
+    "name": "Armenia",
+    "nameEn": "Armenia",
+    "capital": "Ereván",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "AM",
+    "iso3": "ARM",
+    "mapId": "ARM",
+    "mapNumericId": "051",
+    "coordinates": [
+      45,
+      40
+    ]
+  },
+  {
+    "id": "ATG",
+    "name": "Antigua y Barbuda",
+    "nameEn": "Antigua and Barbuda",
+    "capital": "Saint John's",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "AG",
+    "iso3": "ATG",
+    "mapId": "ATG",
+    "mapNumericId": "028",
+    "coordinates": [
+      -61.8,
+      17.05
+    ]
+  },
+  {
+    "id": "AUS",
+    "name": "Australia",
+    "nameEn": "Australia",
+    "capital": "Canberra",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "AU",
+    "iso3": "AUS",
+    "mapId": "AUS",
+    "mapNumericId": "036",
+    "coordinates": [
+      133,
+      -27
+    ]
+  },
+  {
+    "id": "AUT",
+    "name": "Austria",
+    "nameEn": "Austria",
+    "capital": "Viena",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "AT",
+    "iso3": "AUT",
+    "mapId": "AUT",
+    "mapNumericId": "040",
+    "coordinates": [
+      13.33333333,
+      47.33333333
+    ]
+  },
+  {
+    "id": "AZE",
+    "name": "Azerbaiyán",
+    "nameEn": "Azerbaijan",
+    "capital": "Bakú",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "AZ",
+    "iso3": "AZE",
+    "mapId": "AZE",
+    "mapNumericId": "031",
+    "coordinates": [
+      47.5,
+      40.5
+    ]
+  },
+  {
+    "id": "BDI",
+    "name": "Burundi",
+    "nameEn": "Burundi",
+    "capital": "Gitega",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "BI",
+    "iso3": "BDI",
+    "mapId": "BDI",
+    "mapNumericId": "108",
+    "coordinates": [
+      30,
+      -3.5
+    ]
+  },
+  {
+    "id": "BEL",
+    "name": "Bélgica",
+    "nameEn": "Belgium",
+    "capital": "Bruselas",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "BE",
+    "iso3": "BEL",
+    "mapId": "BEL",
+    "mapNumericId": "056",
+    "coordinates": [
+      4,
+      50.83333333
+    ]
+  },
+  {
+    "id": "BEN",
+    "name": "Benín",
+    "nameEn": "Benin",
+    "capital": "Porto Novo",
+    "capitalAliases": [
+      "Cotonú"
+    ],
+    "capitalNote": "Porto Novo es la capital oficial; Cotonú alberga la sede del Gobierno.",
+    "continent": "África",
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "mapId": "BEN",
+    "mapNumericId": "204",
+    "coordinates": [
+      2.25,
+      9.5
+    ]
+  },
+  {
+    "id": "BFA",
+    "name": "Burkina Faso",
+    "nameEn": "Burkina Faso",
+    "capital": "Uagadugú",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "BF",
+    "iso3": "BFA",
+    "mapId": "BFA",
+    "mapNumericId": "854",
+    "coordinates": [
+      -2,
+      13
+    ]
+  },
+  {
+    "id": "BGD",
+    "name": "Bangladesh",
+    "nameEn": "Bangladesh",
+    "capital": "Daca",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "BD",
+    "iso3": "BGD",
+    "mapId": "BGD",
+    "mapNumericId": "050",
+    "coordinates": [
+      90,
+      24
+    ]
+  },
+  {
+    "id": "BGR",
+    "name": "Bulgaria",
+    "nameEn": "Bulgaria",
+    "capital": "Sofía",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "BG",
+    "iso3": "BGR",
+    "mapId": "BGR",
+    "mapNumericId": "100",
+    "coordinates": [
+      25,
+      43
+    ]
+  },
+  {
+    "id": "BHR",
+    "name": "Baréin",
+    "nameEn": "Bahrain",
+    "capital": "Manama",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "BH",
+    "iso3": "BHR",
+    "mapId": "BHR",
+    "mapNumericId": "048",
+    "coordinates": [
+      50.55,
+      26
+    ]
+  },
+  {
+    "id": "BHS",
+    "name": "Bahamas",
+    "nameEn": "Bahamas",
+    "capital": "Nassau",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "BS",
+    "iso3": "BHS",
+    "mapId": "BHS",
+    "mapNumericId": "044",
+    "coordinates": [
+      -76,
+      24.25
+    ]
+  },
+  {
+    "id": "BIH",
+    "name": "Bosnia y Herzegovina",
+    "nameEn": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "BA",
+    "iso3": "BIH",
+    "mapId": "BIH",
+    "mapNumericId": "070",
+    "coordinates": [
+      18,
+      44
+    ]
+  },
+  {
+    "id": "BLR",
+    "name": "Bielorrusia",
+    "nameEn": "Belarus",
+    "capital": "Minsk",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "BY",
+    "iso3": "BLR",
+    "mapId": "BLR",
+    "mapNumericId": "112",
+    "coordinates": [
+      28,
+      53
+    ]
+  },
+  {
+    "id": "BLZ",
+    "name": "Belice",
+    "nameEn": "Belize",
+    "capital": "Belmopan",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "BZ",
+    "iso3": "BLZ",
+    "mapId": "BLZ",
+    "mapNumericId": "084",
+    "coordinates": [
+      -88.75,
+      17.25
+    ]
+  },
+  {
+    "id": "BOL",
+    "name": "Bolivia",
+    "nameEn": "Bolivia",
+    "capital": "Sucre",
+    "capitalAliases": [
+      "La Paz"
+    ],
+    "capitalNote": "Sucre es la capital constitucional; La Paz es la sede del Gobierno.",
+    "continent": "América",
+    "iso2": "BO",
+    "iso3": "BOL",
+    "mapId": "BOL",
+    "mapNumericId": "068",
+    "coordinates": [
+      -65,
+      -17
+    ]
+  },
+  {
+    "id": "BRA",
+    "name": "Brasil",
+    "nameEn": "Brazil",
+    "capital": "Brasilia",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "BR",
+    "iso3": "BRA",
+    "mapId": "BRA",
+    "mapNumericId": "076",
+    "coordinates": [
+      -55,
+      -10
+    ]
+  },
+  {
+    "id": "BRB",
+    "name": "Barbados",
+    "nameEn": "Barbados",
+    "capital": "Bridgetown",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "BB",
+    "iso3": "BRB",
+    "mapId": "BRB",
+    "mapNumericId": "052",
+    "coordinates": [
+      -59.53333333,
+      13.16666666
+    ]
+  },
+  {
+    "id": "BRN",
+    "name": "Brunéi",
+    "nameEn": "Brunei",
+    "capital": "Bandar Seri Begawan",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "BN",
+    "iso3": "BRN",
+    "mapId": "BRN",
+    "mapNumericId": "096",
+    "coordinates": [
+      114.66666666,
+      4.5
+    ]
+  },
+  {
+    "id": "BTN",
+    "name": "Bután",
+    "nameEn": "Bhutan",
+    "capital": "Timbu",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "BT",
+    "iso3": "BTN",
+    "mapId": "BTN",
+    "mapNumericId": "064",
+    "coordinates": [
+      90.5,
+      27.5
+    ]
+  },
+  {
+    "id": "BWA",
+    "name": "Botsuana",
+    "nameEn": "Botswana",
+    "capital": "Gaborone",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "BW",
+    "iso3": "BWA",
+    "mapId": "BWA",
+    "mapNumericId": "072",
+    "coordinates": [
+      24,
+      -22
+    ]
+  },
+  {
+    "id": "CAF",
+    "name": "República Centroafricana",
+    "nameEn": "Central African Republic",
+    "capital": "Bangui",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "CF",
+    "iso3": "CAF",
+    "mapId": "CAF",
+    "mapNumericId": "140",
+    "coordinates": [
+      21,
+      7
+    ]
+  },
+  {
+    "id": "CAN",
+    "name": "Canadá",
+    "nameEn": "Canada",
+    "capital": "Ottawa",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "CA",
+    "iso3": "CAN",
+    "mapId": "CAN",
+    "mapNumericId": "124",
+    "coordinates": [
+      -95,
+      60
+    ]
+  },
+  {
+    "id": "CHE",
+    "name": "Suiza",
+    "nameEn": "Switzerland",
+    "capital": "Berna",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "CH",
+    "iso3": "CHE",
+    "mapId": "CHE",
+    "mapNumericId": "756",
+    "coordinates": [
+      8,
+      47
+    ]
+  },
+  {
+    "id": "CHL",
+    "name": "Chile",
+    "nameEn": "Chile",
+    "capital": "Santiago",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "CL",
+    "iso3": "CHL",
+    "mapId": "CHL",
+    "mapNumericId": "152",
+    "coordinates": [
+      -71,
+      -30
+    ]
+  },
+  {
+    "id": "CHN",
+    "name": "China",
+    "nameEn": "China",
+    "capital": "Pekín",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "CN",
+    "iso3": "CHN",
+    "mapId": "CHN",
+    "mapNumericId": "156",
+    "coordinates": [
+      105,
+      35
+    ]
+  },
+  {
+    "id": "CIV",
+    "name": "Costa de Marfil",
+    "nameEn": "Ivory Coast",
+    "capital": "Yamusukro",
+    "capitalAliases": [
+      "Abiyán"
+    ],
+    "capitalNote": "Yamusukro es la capital oficial; Abiyán continúa siendo la principal sede administrativa y económica.",
+    "continent": "África",
+    "iso2": "CI",
+    "iso3": "CIV",
+    "mapId": "CIV",
+    "mapNumericId": "384",
+    "coordinates": [
+      -5,
+      8
+    ]
+  },
+  {
+    "id": "CMR",
+    "name": "Camerún",
+    "nameEn": "Cameroon",
+    "capital": "Yaundé",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "CM",
+    "iso3": "CMR",
+    "mapId": "CMR",
+    "mapNumericId": "120",
+    "coordinates": [
+      12,
+      6
+    ]
+  },
+  {
+    "id": "COD",
+    "name": "República Democrática del Congo",
+    "nameEn": "DR Congo",
+    "capital": "Kinshasa",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "CD",
+    "iso3": "COD",
+    "mapId": "COD",
+    "mapNumericId": "180",
+    "coordinates": [
+      25,
+      0
+    ]
+  },
+  {
+    "id": "COG",
+    "name": "República del Congo",
+    "nameEn": "Republic of the Congo",
+    "capital": "Brazzaville",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "CG",
+    "iso3": "COG",
+    "mapId": "COG",
+    "mapNumericId": "178",
+    "coordinates": [
+      15,
+      -1
+    ]
+  },
+  {
+    "id": "COL",
+    "name": "Colombia",
+    "nameEn": "Colombia",
+    "capital": "Bogotá",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "CO",
+    "iso3": "COL",
+    "mapId": "COL",
+    "mapNumericId": "170",
+    "coordinates": [
+      -72,
+      4
+    ]
+  },
+  {
+    "id": "COM",
+    "name": "Comoras",
+    "nameEn": "Comoros",
+    "capital": "Moroni",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "KM",
+    "iso3": "COM",
+    "mapId": "COM",
+    "mapNumericId": "174",
+    "coordinates": [
+      44.25,
+      -12.16666666
+    ]
+  },
+  {
+    "id": "CPV",
+    "name": "Cabo Verde",
+    "nameEn": "Cape Verde",
+    "capital": "Praia",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "CV",
+    "iso3": "CPV",
+    "mapId": "CPV",
+    "mapNumericId": "132",
+    "coordinates": [
+      -24,
+      16
+    ]
+  },
+  {
+    "id": "CRI",
+    "name": "Costa Rica",
+    "nameEn": "Costa Rica",
+    "capital": "San José",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "CR",
+    "iso3": "CRI",
+    "mapId": "CRI",
+    "mapNumericId": "188",
+    "coordinates": [
+      -84,
+      10
+    ]
+  },
+  {
+    "id": "CUB",
+    "name": "Cuba",
+    "nameEn": "Cuba",
+    "capital": "La Habana",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "CU",
+    "iso3": "CUB",
+    "mapId": "CUB",
+    "mapNumericId": "192",
+    "coordinates": [
+      -80,
+      21.5
+    ]
+  },
+  {
+    "id": "CYP",
+    "name": "Chipre",
+    "nameEn": "Cyprus",
+    "capital": "Nicosia",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "CY",
+    "iso3": "CYP",
+    "mapId": "CYP",
+    "mapNumericId": "196",
+    "coordinates": [
+      33,
+      35
+    ]
+  },
+  {
+    "id": "CZE",
+    "name": "Chequia",
+    "nameEn": "Czechia",
+    "capital": "Praga",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "CZ",
+    "iso3": "CZE",
+    "mapId": "CZE",
+    "mapNumericId": "203",
+    "coordinates": [
+      15.5,
+      49.75
+    ]
+  },
+  {
+    "id": "DEU",
+    "name": "Alemania",
+    "nameEn": "Germany",
+    "capital": "Berlín",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "DE",
+    "iso3": "DEU",
+    "mapId": "DEU",
+    "mapNumericId": "276",
+    "coordinates": [
+      9,
+      51
+    ]
+  },
+  {
+    "id": "DJI",
+    "name": "Yibuti",
+    "nameEn": "Djibouti",
+    "capital": "Yibuti",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "DJ",
+    "iso3": "DJI",
+    "mapId": "DJI",
+    "mapNumericId": "262",
+    "coordinates": [
+      43,
+      11.5
+    ]
+  },
+  {
+    "id": "DMA",
+    "name": "Dominica",
+    "nameEn": "Dominica",
+    "capital": "Roseau",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "DM",
+    "iso3": "DMA",
+    "mapId": "DMA",
+    "mapNumericId": "212",
+    "coordinates": [
+      -61.33333333,
+      15.41666666
+    ]
+  },
+  {
+    "id": "DNK",
+    "name": "Dinamarca",
+    "nameEn": "Denmark",
+    "capital": "Copenhague",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "DK",
+    "iso3": "DNK",
+    "mapId": "DNK",
+    "mapNumericId": "208",
+    "coordinates": [
+      10,
+      56
+    ]
+  },
+  {
+    "id": "DOM",
+    "name": "República Dominicana",
+    "nameEn": "Dominican Republic",
+    "capital": "Santo Domingo",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "DO",
+    "iso3": "DOM",
+    "mapId": "DOM",
+    "mapNumericId": "214",
+    "coordinates": [
+      -70.66666666,
+      19
+    ]
+  },
+  {
+    "id": "DZA",
+    "name": "Argelia",
+    "nameEn": "Algeria",
+    "capital": "Argel",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "DZ",
+    "iso3": "DZA",
+    "mapId": "DZA",
+    "mapNumericId": "012",
+    "coordinates": [
+      3,
+      28
+    ]
+  },
+  {
+    "id": "ECU",
+    "name": "Ecuador",
+    "nameEn": "Ecuador",
+    "capital": "Quito",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "EC",
+    "iso3": "ECU",
+    "mapId": "ECU",
+    "mapNumericId": "218",
+    "coordinates": [
+      -77.5,
+      -2
+    ]
+  },
+  {
+    "id": "EGY",
+    "name": "Egipto",
+    "nameEn": "Egypt",
+    "capital": "El Cairo",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "EG",
+    "iso3": "EGY",
+    "mapId": "EGY",
+    "mapNumericId": "818",
+    "coordinates": [
+      30,
+      27
+    ]
+  },
+  {
+    "id": "ERI",
+    "name": "Eritrea",
+    "nameEn": "Eritrea",
+    "capital": "Asmara",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "ER",
+    "iso3": "ERI",
+    "mapId": "ERI",
+    "mapNumericId": "232",
+    "coordinates": [
+      39,
+      15
+    ]
+  },
+  {
+    "id": "ESP",
+    "name": "España",
+    "nameEn": "Spain",
+    "capital": "Madrid",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "ES",
+    "iso3": "ESP",
+    "mapId": "ESP",
+    "mapNumericId": "724",
+    "coordinates": [
+      -4,
+      40
+    ]
+  },
+  {
+    "id": "EST",
+    "name": "Estonia",
+    "nameEn": "Estonia",
+    "capital": "Tallin",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "EE",
+    "iso3": "EST",
+    "mapId": "EST",
+    "mapNumericId": "233",
+    "coordinates": [
+      26,
+      59
+    ]
+  },
+  {
+    "id": "ETH",
+    "name": "Etiopía",
+    "nameEn": "Ethiopia",
+    "capital": "Adís Abeba",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "ET",
+    "iso3": "ETH",
+    "mapId": "ETH",
+    "mapNumericId": "231",
+    "coordinates": [
+      38,
+      8
+    ]
+  },
+  {
+    "id": "FIN",
+    "name": "Finlandia",
+    "nameEn": "Finland",
+    "capital": "Helsinki",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "FI",
+    "iso3": "FIN",
+    "mapId": "FIN",
+    "mapNumericId": "246",
+    "coordinates": [
+      26,
+      64
+    ]
+  },
+  {
+    "id": "FJI",
+    "name": "Fiyi",
+    "nameEn": "Fiji",
+    "capital": "Suva",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "FJ",
+    "iso3": "FJI",
+    "mapId": "FJI",
+    "mapNumericId": "242",
+    "coordinates": [
+      175,
+      -18
+    ]
+  },
+  {
+    "id": "FRA",
+    "name": "Francia",
+    "nameEn": "France",
+    "capital": "París",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "FR",
+    "iso3": "FRA",
+    "mapId": "FRA",
+    "mapNumericId": "250",
+    "coordinates": [
+      2,
+      46
+    ]
+  },
+  {
+    "id": "FSM",
+    "name": "Micronesia",
+    "nameEn": "Micronesia",
+    "capital": "Palikir",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "FM",
+    "iso3": "FSM",
+    "mapId": "FSM",
+    "mapNumericId": "583",
+    "coordinates": [
+      158.25,
+      6.91666666
+    ]
+  },
+  {
+    "id": "GAB",
+    "name": "Gabón",
+    "nameEn": "Gabon",
+    "capital": "Libreville",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "GA",
+    "iso3": "GAB",
+    "mapId": "GAB",
+    "mapNumericId": "266",
+    "coordinates": [
+      11.75,
+      -1
+    ]
+  },
+  {
+    "id": "GBR",
+    "name": "Reino Unido",
+    "nameEn": "United Kingdom",
+    "capital": "Londres",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "GB",
+    "iso3": "GBR",
+    "mapId": "GBR",
+    "mapNumericId": "826",
+    "coordinates": [
+      -2,
+      54
+    ]
+  },
+  {
+    "id": "GEO",
+    "name": "Georgia",
+    "nameEn": "Georgia",
+    "capital": "Tiflis",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "GE",
+    "iso3": "GEO",
+    "mapId": "GEO",
+    "mapNumericId": "268",
+    "coordinates": [
+      43.5,
+      42
+    ]
+  },
+  {
+    "id": "GHA",
+    "name": "Ghana",
+    "nameEn": "Ghana",
+    "capital": "Accra",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "GH",
+    "iso3": "GHA",
+    "mapId": "GHA",
+    "mapNumericId": "288",
+    "coordinates": [
+      -2,
+      8
+    ]
+  },
+  {
+    "id": "GIN",
+    "name": "Guinea",
+    "nameEn": "Guinea",
+    "capital": "Conakri",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "GN",
+    "iso3": "GIN",
+    "mapId": "GIN",
+    "mapNumericId": "324",
+    "coordinates": [
+      -10,
+      11
+    ]
+  },
+  {
+    "id": "GMB",
+    "name": "Gambia",
+    "nameEn": "Gambia",
+    "capital": "Banjul",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "GM",
+    "iso3": "GMB",
+    "mapId": "GMB",
+    "mapNumericId": "270",
+    "coordinates": [
+      -16.56666666,
+      13.46666666
+    ]
+  },
+  {
+    "id": "GNB",
+    "name": "Guinea-Bisáu",
+    "nameEn": "Guinea-Bissau",
+    "capital": "Bisáu",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "GW",
+    "iso3": "GNB",
+    "mapId": "GNB",
+    "mapNumericId": "624",
+    "coordinates": [
+      -15,
+      12
+    ]
+  },
+  {
+    "id": "GNQ",
+    "name": "Guinea Ecuatorial",
+    "nameEn": "Equatorial Guinea",
+    "capital": "Malabo",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "GQ",
+    "iso3": "GNQ",
+    "mapId": "GNQ",
+    "mapNumericId": "226",
+    "coordinates": [
+      10,
+      2
+    ]
+  },
+  {
+    "id": "GRC",
+    "name": "Grecia",
+    "nameEn": "Greece",
+    "capital": "Atenas",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "GR",
+    "iso3": "GRC",
+    "mapId": "GRC",
+    "mapNumericId": "300",
+    "coordinates": [
+      22,
+      39
+    ]
+  },
+  {
+    "id": "GRD",
+    "name": "Granada",
+    "nameEn": "Grenada",
+    "capital": "Saint George's",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "GD",
+    "iso3": "GRD",
+    "mapId": "GRD",
+    "mapNumericId": "308",
+    "coordinates": [
+      -61.66666666,
+      12.11666666
+    ]
+  },
+  {
+    "id": "GTM",
+    "name": "Guatemala",
+    "nameEn": "Guatemala",
+    "capital": "Ciudad de Guatemala",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "GT",
+    "iso3": "GTM",
+    "mapId": "GTM",
+    "mapNumericId": "320",
+    "coordinates": [
+      -90.25,
+      15.5
+    ]
+  },
+  {
+    "id": "GUY",
+    "name": "Guyana",
+    "nameEn": "Guyana",
+    "capital": "Georgetown",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "GY",
+    "iso3": "GUY",
+    "mapId": "GUY",
+    "mapNumericId": "328",
+    "coordinates": [
+      -59,
+      5
+    ]
+  },
+  {
+    "id": "HND",
+    "name": "Honduras",
+    "nameEn": "Honduras",
+    "capital": "Tegucigalpa",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "HN",
+    "iso3": "HND",
+    "mapId": "HND",
+    "mapNumericId": "340",
+    "coordinates": [
+      -86.5,
+      15
+    ]
+  },
+  {
+    "id": "HRV",
+    "name": "Croacia",
+    "nameEn": "Croatia",
+    "capital": "Zagreb",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "HR",
+    "iso3": "HRV",
+    "mapId": "HRV",
+    "mapNumericId": "191",
+    "coordinates": [
+      15.5,
+      45.16666666
+    ]
+  },
+  {
+    "id": "HTI",
+    "name": "Haití",
+    "nameEn": "Haiti",
+    "capital": "Puerto Príncipe",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "HT",
+    "iso3": "HTI",
+    "mapId": "HTI",
+    "mapNumericId": "332",
+    "coordinates": [
+      -72.41666666,
+      19
+    ]
+  },
+  {
+    "id": "HUN",
+    "name": "Hungría",
+    "nameEn": "Hungary",
+    "capital": "Budapest",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "HU",
+    "iso3": "HUN",
+    "mapId": "HUN",
+    "mapNumericId": "348",
+    "coordinates": [
+      20,
+      47
+    ]
+  },
+  {
+    "id": "IDN",
+    "name": "Indonesia",
+    "nameEn": "Indonesia",
+    "capital": "Yakarta",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "ID",
+    "iso3": "IDN",
+    "mapId": "IDN",
+    "mapNumericId": "360",
+    "coordinates": [
+      120,
+      -5
+    ]
+  },
+  {
+    "id": "IND",
+    "name": "India",
+    "nameEn": "India",
+    "capital": "Nueva Delhi",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "IN",
+    "iso3": "IND",
+    "mapId": "IND",
+    "mapNumericId": "356",
+    "coordinates": [
+      77,
+      20
+    ]
+  },
+  {
+    "id": "IRL",
+    "name": "Irlanda",
+    "nameEn": "Ireland",
+    "capital": "Dublín",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "IE",
+    "iso3": "IRL",
+    "mapId": "IRL",
+    "mapNumericId": "372",
+    "coordinates": [
+      -8,
+      53
+    ]
+  },
+  {
+    "id": "IRN",
+    "name": "Irán",
+    "nameEn": "Iran",
+    "capital": "Teherán",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "IR",
+    "iso3": "IRN",
+    "mapId": "IRN",
+    "mapNumericId": "364",
+    "coordinates": [
+      53,
+      32
+    ]
+  },
+  {
+    "id": "IRQ",
+    "name": "Irak",
+    "nameEn": "Iraq",
+    "capital": "Bagdad",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "IQ",
+    "iso3": "IRQ",
+    "mapId": "IRQ",
+    "mapNumericId": "368",
+    "coordinates": [
+      44,
+      33
+    ]
+  },
+  {
+    "id": "ISL",
+    "name": "Islandia",
+    "nameEn": "Iceland",
+    "capital": "Reikiavik",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "IS",
+    "iso3": "ISL",
+    "mapId": "ISL",
+    "mapNumericId": "352",
+    "coordinates": [
+      -18,
+      65
+    ]
+  },
+  {
+    "id": "ISR",
+    "name": "Israel",
+    "nameEn": "Israel",
+    "capital": "Jerusalén",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "IL",
+    "iso3": "ISR",
+    "mapId": "ISR",
+    "mapNumericId": "376",
+    "coordinates": [
+      35.13,
+      31.47
+    ]
+  },
+  {
+    "id": "ITA",
+    "name": "Italia",
+    "nameEn": "Italy",
+    "capital": "Roma",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "IT",
+    "iso3": "ITA",
+    "mapId": "ITA",
+    "mapNumericId": "380",
+    "coordinates": [
+      12.83333333,
+      42.83333333
+    ]
+  },
+  {
+    "id": "JAM",
+    "name": "Jamaica",
+    "nameEn": "Jamaica",
+    "capital": "Kingston",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "JM",
+    "iso3": "JAM",
+    "mapId": "JAM",
+    "mapNumericId": "388",
+    "coordinates": [
+      -77.5,
+      18.25
+    ]
+  },
+  {
+    "id": "JOR",
+    "name": "Jordania",
+    "nameEn": "Jordan",
+    "capital": "Amán",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "JO",
+    "iso3": "JOR",
+    "mapId": "JOR",
+    "mapNumericId": "400",
+    "coordinates": [
+      36,
+      31
+    ]
+  },
+  {
+    "id": "JPN",
+    "name": "Japón",
+    "nameEn": "Japan",
+    "capital": "Tokio",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "JP",
+    "iso3": "JPN",
+    "mapId": "JPN",
+    "mapNumericId": "392",
+    "coordinates": [
+      138,
+      36
+    ]
+  },
+  {
+    "id": "KAZ",
+    "name": "Kazajistán",
+    "nameEn": "Kazakhstan",
+    "capital": "Astaná",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "KZ",
+    "iso3": "KAZ",
+    "mapId": "KAZ",
+    "mapNumericId": "398",
+    "coordinates": [
+      68,
+      48
+    ]
+  },
+  {
+    "id": "KEN",
+    "name": "Kenia",
+    "nameEn": "Kenya",
+    "capital": "Nairobi",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "KE",
+    "iso3": "KEN",
+    "mapId": "KEN",
+    "mapNumericId": "404",
+    "coordinates": [
+      38,
+      1
+    ]
+  },
+  {
+    "id": "KGZ",
+    "name": "Kirguistán",
+    "nameEn": "Kyrgyzstan",
+    "capital": "Biskek",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "KG",
+    "iso3": "KGZ",
+    "mapId": "KGZ",
+    "mapNumericId": "417",
+    "coordinates": [
+      75,
+      41
+    ]
+  },
+  {
+    "id": "KHM",
+    "name": "Camboya",
+    "nameEn": "Cambodia",
+    "capital": "Nom Pen",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "KH",
+    "iso3": "KHM",
+    "mapId": "KHM",
+    "mapNumericId": "116",
+    "coordinates": [
+      105,
+      13
+    ]
+  },
+  {
+    "id": "KIR",
+    "name": "Kiribati",
+    "nameEn": "Kiribati",
+    "capital": "Tarawa del Sur",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "KI",
+    "iso3": "KIR",
+    "mapId": "KIR",
+    "mapNumericId": "296",
+    "coordinates": [
+      173,
+      1.41666666
+    ]
+  },
+  {
+    "id": "KNA",
+    "name": "San Cristóbal y Nieves",
+    "nameEn": "Saint Kitts and Nevis",
+    "capital": "Basseterre",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "KN",
+    "iso3": "KNA",
+    "mapId": "KNA",
+    "mapNumericId": "659",
+    "coordinates": [
+      -62.75,
+      17.33333333
+    ]
+  },
+  {
+    "id": "KOR",
+    "name": "Corea del Sur",
+    "nameEn": "South Korea",
+    "capital": "Seúl",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "KR",
+    "iso3": "KOR",
+    "mapId": "KOR",
+    "mapNumericId": "410",
+    "coordinates": [
+      127.5,
+      37
+    ]
+  },
+  {
+    "id": "KWT",
+    "name": "Kuwait",
+    "nameEn": "Kuwait",
+    "capital": "Ciudad de Kuwait",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "KW",
+    "iso3": "KWT",
+    "mapId": "KWT",
+    "mapNumericId": "414",
+    "coordinates": [
+      45.75,
+      29.5
+    ]
+  },
+  {
+    "id": "LAO",
+    "name": "Laos",
+    "nameEn": "Laos",
+    "capital": "Vientián",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "LA",
+    "iso3": "LAO",
+    "mapId": "LAO",
+    "mapNumericId": "418",
+    "coordinates": [
+      105,
+      18
+    ]
+  },
+  {
+    "id": "LBN",
+    "name": "Líbano",
+    "nameEn": "Lebanon",
+    "capital": "Beirut",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "LB",
+    "iso3": "LBN",
+    "mapId": "LBN",
+    "mapNumericId": "422",
+    "coordinates": [
+      35.83333333,
+      33.83333333
+    ]
+  },
+  {
+    "id": "LBR",
+    "name": "Liberia",
+    "nameEn": "Liberia",
+    "capital": "Monrovia",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "LR",
+    "iso3": "LBR",
+    "mapId": "LBR",
+    "mapNumericId": "430",
+    "coordinates": [
+      -9.5,
+      6.5
+    ]
+  },
+  {
+    "id": "LBY",
+    "name": "Libia",
+    "nameEn": "Libya",
+    "capital": "Trípoli",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "LY",
+    "iso3": "LBY",
+    "mapId": "LBY",
+    "mapNumericId": "434",
+    "coordinates": [
+      17,
+      25
+    ]
+  },
+  {
+    "id": "LCA",
+    "name": "Santa Lucía",
+    "nameEn": "Saint Lucia",
+    "capital": "Castries",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "LC",
+    "iso3": "LCA",
+    "mapId": "LCA",
+    "mapNumericId": "662",
+    "coordinates": [
+      -60.96666666,
+      13.88333333
+    ]
+  },
+  {
+    "id": "LIE",
+    "name": "Liechtenstein",
+    "nameEn": "Liechtenstein",
+    "capital": "Vaduz",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "LI",
+    "iso3": "LIE",
+    "mapId": "LIE",
+    "mapNumericId": "438",
+    "coordinates": [
+      9.53333333,
+      47.26666666
+    ]
+  },
+  {
+    "id": "LKA",
+    "name": "Sri Lanka",
+    "nameEn": "Sri Lanka",
+    "capital": "Colombo",
+    "capitalAliases": [],
+    "capitalNote": "Sri Jayawardenepura Kotte es la capital legislativa; Colombo concentra varias funciones administrativas.",
+    "continent": "Asia",
+    "iso2": "LK",
+    "iso3": "LKA",
+    "mapId": "LKA",
+    "mapNumericId": "144",
+    "coordinates": [
+      81,
+      7
+    ]
+  },
+  {
+    "id": "LSO",
+    "name": "Lesoto",
+    "nameEn": "Lesotho",
+    "capital": "Maseru",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "LS",
+    "iso3": "LSO",
+    "mapId": "LSO",
+    "mapNumericId": "426",
+    "coordinates": [
+      28.5,
+      -29.5
+    ]
+  },
+  {
+    "id": "LTU",
+    "name": "Lituania",
+    "nameEn": "Lithuania",
+    "capital": "Vilna",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "LT",
+    "iso3": "LTU",
+    "mapId": "LTU",
+    "mapNumericId": "440",
+    "coordinates": [
+      24,
+      56
+    ]
+  },
+  {
+    "id": "LUX",
+    "name": "Luxemburgo",
+    "nameEn": "Luxembourg",
+    "capital": "Luxemburgo",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "LU",
+    "iso3": "LUX",
+    "mapId": "LUX",
+    "mapNumericId": "442",
+    "coordinates": [
+      6.16666666,
+      49.75
+    ]
+  },
+  {
+    "id": "LVA",
+    "name": "Letonia",
+    "nameEn": "Latvia",
+    "capital": "Riga",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "LV",
+    "iso3": "LVA",
+    "mapId": "LVA",
+    "mapNumericId": "428",
+    "coordinates": [
+      25,
+      57
+    ]
+  },
+  {
+    "id": "MAR",
+    "name": "Marruecos",
+    "nameEn": "Morocco",
+    "capital": "Rabat",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "MA",
+    "iso3": "MAR",
+    "mapId": "MAR",
+    "mapNumericId": "504",
+    "coordinates": [
+      -5,
+      32
+    ]
+  },
+  {
+    "id": "MCO",
+    "name": "Mónaco",
+    "nameEn": "Monaco",
+    "capital": "Mónaco",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "MC",
+    "iso3": "MCO",
+    "mapId": "MCO",
+    "mapNumericId": "492",
+    "coordinates": [
+      7.4,
+      43.73333333
+    ]
+  },
+  {
+    "id": "MDA",
+    "name": "Moldavia",
+    "nameEn": "Moldova",
+    "capital": "Chisináu",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "MD",
+    "iso3": "MDA",
+    "mapId": "MDA",
+    "mapNumericId": "498",
+    "coordinates": [
+      29,
+      47
+    ]
+  },
+  {
+    "id": "MDG",
+    "name": "Madagascar",
+    "nameEn": "Madagascar",
+    "capital": "Antananarivo",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "MG",
+    "iso3": "MDG",
+    "mapId": "MDG",
+    "mapNumericId": "450",
+    "coordinates": [
+      47,
+      -20
+    ]
+  },
+  {
+    "id": "MDV",
+    "name": "Maldivas",
+    "nameEn": "Maldives",
+    "capital": "Malé",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "MV",
+    "iso3": "MDV",
+    "mapId": "MDV",
+    "mapNumericId": "462",
+    "coordinates": [
+      73,
+      3.25
+    ]
+  },
+  {
+    "id": "MEX",
+    "name": "México",
+    "nameEn": "Mexico",
+    "capital": "Ciudad de México",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "MX",
+    "iso3": "MEX",
+    "mapId": "MEX",
+    "mapNumericId": "484",
+    "coordinates": [
+      -102,
+      23
+    ]
+  },
+  {
+    "id": "MHL",
+    "name": "Islas Marshall",
+    "nameEn": "Marshall Islands",
+    "capital": "Majuro",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "MH",
+    "iso3": "MHL",
+    "mapId": "MHL",
+    "mapNumericId": "584",
+    "coordinates": [
+      168,
+      9
+    ]
+  },
+  {
+    "id": "MKD",
+    "name": "Macedonia del Norte",
+    "nameEn": "North Macedonia",
+    "capital": "Skopie",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "MK",
+    "iso3": "MKD",
+    "mapId": "MKD",
+    "mapNumericId": "807",
+    "coordinates": [
+      22,
+      41.83333333
+    ]
+  },
+  {
+    "id": "MLI",
+    "name": "Malí",
+    "nameEn": "Mali",
+    "capital": "Bamako",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "ML",
+    "iso3": "MLI",
+    "mapId": "MLI",
+    "mapNumericId": "466",
+    "coordinates": [
+      -4,
+      17
+    ]
+  },
+  {
+    "id": "MLT",
+    "name": "Malta",
+    "nameEn": "Malta",
+    "capital": "La Valeta",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "MT",
+    "iso3": "MLT",
+    "mapId": "MLT",
+    "mapNumericId": "470",
+    "coordinates": [
+      14.58333333,
+      35.83333333
+    ]
+  },
+  {
+    "id": "MMR",
+    "name": "Myanmar",
+    "nameEn": "Myanmar",
+    "capital": "Naipyidó",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "MM",
+    "iso3": "MMR",
+    "mapId": "MMR",
+    "mapNumericId": "104",
+    "coordinates": [
+      98,
+      22
+    ]
+  },
+  {
+    "id": "MNE",
+    "name": "Montenegro",
+    "nameEn": "Montenegro",
+    "capital": "Podgorica",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "ME",
+    "iso3": "MNE",
+    "mapId": "MNE",
+    "mapNumericId": "499",
+    "coordinates": [
+      19.3,
+      42.5
+    ]
+  },
+  {
+    "id": "MNG",
+    "name": "Mongolia",
+    "nameEn": "Mongolia",
+    "capital": "Ulán Bator",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "MN",
+    "iso3": "MNG",
+    "mapId": "MNG",
+    "mapNumericId": "496",
+    "coordinates": [
+      105,
+      46
+    ]
+  },
+  {
+    "id": "MOZ",
+    "name": "Mozambique",
+    "nameEn": "Mozambique",
+    "capital": "Maputo",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "MZ",
+    "iso3": "MOZ",
+    "mapId": "MOZ",
+    "mapNumericId": "508",
+    "coordinates": [
+      35,
+      -18.25
+    ]
+  },
+  {
+    "id": "MRT",
+    "name": "Mauritania",
+    "nameEn": "Mauritania",
+    "capital": "Nuakchot",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "MR",
+    "iso3": "MRT",
+    "mapId": "MRT",
+    "mapNumericId": "478",
+    "coordinates": [
+      -12,
+      20
+    ]
+  },
+  {
+    "id": "MUS",
+    "name": "Mauricio",
+    "nameEn": "Mauritius",
+    "capital": "Puerto Luis",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "MU",
+    "iso3": "MUS",
+    "mapId": "MUS",
+    "mapNumericId": "480",
+    "coordinates": [
+      57.55,
+      -20.28333333
+    ]
+  },
+  {
+    "id": "MWI",
+    "name": "Malaui",
+    "nameEn": "Malawi",
+    "capital": "Lilongwe",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "MW",
+    "iso3": "MWI",
+    "mapId": "MWI",
+    "mapNumericId": "454",
+    "coordinates": [
+      34,
+      -13.5
+    ]
+  },
+  {
+    "id": "MYS",
+    "name": "Malasia",
+    "nameEn": "Malaysia",
+    "capital": "Kuala Lumpur",
+    "capitalAliases": [
+      "Putrajaya"
+    ],
+    "capitalNote": "Kuala Lumpur es la capital; Putrajaya alberga la sede administrativa federal.",
+    "continent": "Asia",
+    "iso2": "MY",
+    "iso3": "MYS",
+    "mapId": "MYS",
+    "mapNumericId": "458",
+    "coordinates": [
+      112.5,
+      2.5
+    ]
+  },
+  {
+    "id": "NAM",
+    "name": "Namibia",
+    "nameEn": "Namibia",
+    "capital": "Windhoek",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "NA",
+    "iso3": "NAM",
+    "mapId": "NAM",
+    "mapNumericId": "516",
+    "coordinates": [
+      17,
+      -22
+    ]
+  },
+  {
+    "id": "NER",
+    "name": "Níger",
+    "nameEn": "Niger",
+    "capital": "Niamey",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "NE",
+    "iso3": "NER",
+    "mapId": "NER",
+    "mapNumericId": "562",
+    "coordinates": [
+      8,
+      16
+    ]
+  },
+  {
+    "id": "NGA",
+    "name": "Nigeria",
+    "nameEn": "Nigeria",
+    "capital": "Abuya",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "NG",
+    "iso3": "NGA",
+    "mapId": "NGA",
+    "mapNumericId": "566",
+    "coordinates": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": "NIC",
+    "name": "Nicaragua",
+    "nameEn": "Nicaragua",
+    "capital": "Managua",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "NI",
+    "iso3": "NIC",
+    "mapId": "NIC",
+    "mapNumericId": "558",
+    "coordinates": [
+      -85,
+      13
+    ]
+  },
+  {
+    "id": "NLD",
+    "name": "Países Bajos",
+    "nameEn": "Netherlands",
+    "capital": "Ámsterdam",
+    "capitalAliases": [],
+    "capitalNote": "Ámsterdam es la capital constitucional; La Haya es la sede del Gobierno y no se ofrece como respuesta alternativa.",
+    "continent": "Europa",
+    "iso2": "NL",
+    "iso3": "NLD",
+    "mapId": "NLD",
+    "mapNumericId": "528",
+    "coordinates": [
+      5.75,
+      52.5
+    ]
+  },
+  {
+    "id": "NOR",
+    "name": "Noruega",
+    "nameEn": "Norway",
+    "capital": "Oslo",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "NO",
+    "iso3": "NOR",
+    "mapId": "NOR",
+    "mapNumericId": "578",
+    "coordinates": [
+      10,
+      62
+    ]
+  },
+  {
+    "id": "NPL",
+    "name": "Nepal",
+    "nameEn": "Nepal",
+    "capital": "Katmandú",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "NP",
+    "iso3": "NPL",
+    "mapId": "NPL",
+    "mapNumericId": "524",
+    "coordinates": [
+      84,
+      28
+    ]
+  },
+  {
+    "id": "NRU",
+    "name": "Nauru",
+    "nameEn": "Nauru",
+    "capital": "Yaren",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "NR",
+    "iso3": "NRU",
+    "mapId": "NRU",
+    "mapNumericId": "520",
+    "coordinates": [
+      166.91666666,
+      -0.53333333
+    ]
+  },
+  {
+    "id": "NZL",
+    "name": "Nueva Zelanda",
+    "nameEn": "New Zealand",
+    "capital": "Wellington",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "NZ",
+    "iso3": "NZL",
+    "mapId": "NZL",
+    "mapNumericId": "554",
+    "coordinates": [
+      174,
+      -41
+    ]
+  },
+  {
+    "id": "OMN",
+    "name": "Omán",
+    "nameEn": "Oman",
+    "capital": "Mascate",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "OM",
+    "iso3": "OMN",
+    "mapId": "OMN",
+    "mapNumericId": "512",
+    "coordinates": [
+      57,
+      21
+    ]
+  },
+  {
+    "id": "PAK",
+    "name": "Pakistán",
+    "nameEn": "Pakistan",
+    "capital": "Islamabad",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "PK",
+    "iso3": "PAK",
+    "mapId": "PAK",
+    "mapNumericId": "586",
+    "coordinates": [
+      70,
+      30
+    ]
+  },
+  {
+    "id": "PAN",
+    "name": "Panamá",
+    "nameEn": "Panama",
+    "capital": "Ciudad de Panamá",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "PA",
+    "iso3": "PAN",
+    "mapId": "PAN",
+    "mapNumericId": "591",
+    "coordinates": [
+      -80,
+      9
+    ]
+  },
+  {
+    "id": "PER",
+    "name": "Perú",
+    "nameEn": "Peru",
+    "capital": "Lima",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "PE",
+    "iso3": "PER",
+    "mapId": "PER",
+    "mapNumericId": "604",
+    "coordinates": [
+      -76,
+      -10
+    ]
+  },
+  {
+    "id": "PHL",
+    "name": "Filipinas",
+    "nameEn": "Philippines",
+    "capital": "Manila",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "PH",
+    "iso3": "PHL",
+    "mapId": "PHL",
+    "mapNumericId": "608",
+    "coordinates": [
+      122,
+      13
+    ]
+  },
+  {
+    "id": "PLW",
+    "name": "Palau",
+    "nameEn": "Palau",
+    "capital": "Ngerulmud",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "PW",
+    "iso3": "PLW",
+    "mapId": "PLW",
+    "mapNumericId": "585",
+    "coordinates": [
+      134.5,
+      7.5
+    ]
+  },
+  {
+    "id": "PNG",
+    "name": "Papúa Nueva Guinea",
+    "nameEn": "Papua New Guinea",
+    "capital": "Port Moresby",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "PG",
+    "iso3": "PNG",
+    "mapId": "PNG",
+    "mapNumericId": "598",
+    "coordinates": [
+      147,
+      -6
+    ]
+  },
+  {
+    "id": "POL",
+    "name": "Polonia",
+    "nameEn": "Poland",
+    "capital": "Varsovia",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "PL",
+    "iso3": "POL",
+    "mapId": "POL",
+    "mapNumericId": "616",
+    "coordinates": [
+      20,
+      52
+    ]
+  },
+  {
+    "id": "PRK",
+    "name": "Corea del Norte",
+    "nameEn": "North Korea",
+    "capital": "Pionyang",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "KP",
+    "iso3": "PRK",
+    "mapId": "PRK",
+    "mapNumericId": "408",
+    "coordinates": [
+      127,
+      40
+    ]
+  },
+  {
+    "id": "PRT",
+    "name": "Portugal",
+    "nameEn": "Portugal",
+    "capital": "Lisboa",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "PT",
+    "iso3": "PRT",
+    "mapId": "PRT",
+    "mapNumericId": "620",
+    "coordinates": [
+      -8,
+      39.5
+    ]
+  },
+  {
+    "id": "PRY",
+    "name": "Paraguay",
+    "nameEn": "Paraguay",
+    "capital": "Asunción",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "PY",
+    "iso3": "PRY",
+    "mapId": "PRY",
+    "mapNumericId": "600",
+    "coordinates": [
+      -58,
+      -23
+    ]
+  },
+  {
+    "id": "PSE",
+    "name": "Palestina",
+    "nameEn": "Palestine",
+    "capital": "Jerusalén Este",
+    "capitalAliases": [
+      "Ramala"
+    ],
+    "capitalNote": "Se usa Jerusalén Este como capital reclamada; Ramala es la sede administrativa de la Autoridad Palestina.",
+    "continent": "Asia",
+    "iso2": "PS",
+    "iso3": "PSE",
+    "mapId": "PSE",
+    "mapNumericId": "275",
+    "coordinates": [
+      35.2,
+      31.9
+    ]
+  },
+  {
+    "id": "QAT",
+    "name": "Catar",
+    "nameEn": "Qatar",
+    "capital": "Doha",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "QA",
+    "iso3": "QAT",
+    "mapId": "QAT",
+    "mapNumericId": "634",
+    "coordinates": [
+      51.25,
+      25.5
+    ]
+  },
+  {
+    "id": "ROU",
+    "name": "Rumanía",
+    "nameEn": "Romania",
+    "capital": "Bucarest",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "RO",
+    "iso3": "ROU",
+    "mapId": "ROU",
+    "mapNumericId": "642",
+    "coordinates": [
+      25,
+      46
+    ]
+  },
+  {
+    "id": "RUS",
+    "name": "Rusia",
+    "nameEn": "Russia",
+    "capital": "Moscú",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "RU",
+    "iso3": "RUS",
+    "mapId": "RUS",
+    "mapNumericId": "643",
+    "coordinates": [
+      100,
+      60
+    ]
+  },
+  {
+    "id": "RWA",
+    "name": "Ruanda",
+    "nameEn": "Rwanda",
+    "capital": "Kigali",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "RW",
+    "iso3": "RWA",
+    "mapId": "RWA",
+    "mapNumericId": "646",
+    "coordinates": [
+      30,
+      -2
+    ]
+  },
+  {
+    "id": "SAU",
+    "name": "Arabia Saudí",
+    "nameEn": "Saudi Arabia",
+    "capital": "Riad",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "SA",
+    "iso3": "SAU",
+    "mapId": "SAU",
+    "mapNumericId": "682",
+    "coordinates": [
+      45,
+      25
+    ]
+  },
+  {
+    "id": "SDN",
+    "name": "Sudán",
+    "nameEn": "Sudan",
+    "capital": "Jartum",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SD",
+    "iso3": "SDN",
+    "mapId": "SDN",
+    "mapNumericId": "729",
+    "coordinates": [
+      30,
+      15
+    ]
+  },
+  {
+    "id": "SEN",
+    "name": "Senegal",
+    "nameEn": "Senegal",
+    "capital": "Dakar",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SN",
+    "iso3": "SEN",
+    "mapId": "SEN",
+    "mapNumericId": "686",
+    "coordinates": [
+      -14,
+      14
+    ]
+  },
+  {
+    "id": "SGP",
+    "name": "Singapur",
+    "nameEn": "Singapore",
+    "capital": "Singapur",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "SG",
+    "iso3": "SGP",
+    "mapId": "SGP",
+    "mapNumericId": "702",
+    "coordinates": [
+      103.8,
+      1.36666666
+    ]
+  },
+  {
+    "id": "SLB",
+    "name": "Islas Salomón",
+    "nameEn": "Solomon Islands",
+    "capital": "Honiara",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "SB",
+    "iso3": "SLB",
+    "mapId": "SLB",
+    "mapNumericId": "090",
+    "coordinates": [
+      159,
+      -8
+    ]
+  },
+  {
+    "id": "SLE",
+    "name": "Sierra Leona",
+    "nameEn": "Sierra Leone",
+    "capital": "Freetown",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SL",
+    "iso3": "SLE",
+    "mapId": "SLE",
+    "mapNumericId": "694",
+    "coordinates": [
+      -11.5,
+      8.5
+    ]
+  },
+  {
+    "id": "SLV",
+    "name": "El Salvador",
+    "nameEn": "El Salvador",
+    "capital": "San Salvador",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "SV",
+    "iso3": "SLV",
+    "mapId": "SLV",
+    "mapNumericId": "222",
+    "coordinates": [
+      -88.91666666,
+      13.83333333
+    ]
+  },
+  {
+    "id": "SMR",
+    "name": "San Marino",
+    "nameEn": "San Marino",
+    "capital": "San Marino",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "SM",
+    "iso3": "SMR",
+    "mapId": "SMR",
+    "mapNumericId": "674",
+    "coordinates": [
+      12.41666666,
+      43.76666666
+    ]
+  },
+  {
+    "id": "SOM",
+    "name": "Somalia",
+    "nameEn": "Somalia",
+    "capital": "Mogadiscio",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SO",
+    "iso3": "SOM",
+    "mapId": "SOM",
+    "mapNumericId": "706",
+    "coordinates": [
+      49,
+      10
+    ]
+  },
+  {
+    "id": "SRB",
+    "name": "Serbia",
+    "nameEn": "Serbia",
+    "capital": "Belgrado",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "RS",
+    "iso3": "SRB",
+    "mapId": "SRB",
+    "mapNumericId": "688",
+    "coordinates": [
+      21,
+      44
+    ]
+  },
+  {
+    "id": "SSD",
+    "name": "Sudán del Sur",
+    "nameEn": "South Sudan",
+    "capital": "Juba",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SS",
+    "iso3": "SSD",
+    "mapId": "SSD",
+    "mapNumericId": "728",
+    "coordinates": [
+      30,
+      7
+    ]
+  },
+  {
+    "id": "STP",
+    "name": "Santo Tomé y Príncipe",
+    "nameEn": "São Tomé and Príncipe",
+    "capital": "Santo Tomé",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "ST",
+    "iso3": "STP",
+    "mapId": "STP",
+    "mapNumericId": "678",
+    "coordinates": [
+      7,
+      1
+    ]
+  },
+  {
+    "id": "SUR",
+    "name": "Surinam",
+    "nameEn": "Suriname",
+    "capital": "Paramaribo",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "SR",
+    "iso3": "SUR",
+    "mapId": "SUR",
+    "mapNumericId": "740",
+    "coordinates": [
+      -56,
+      4
+    ]
+  },
+  {
+    "id": "SVK",
+    "name": "Eslovaquia",
+    "nameEn": "Slovakia",
+    "capital": "Bratislava",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "SK",
+    "iso3": "SVK",
+    "mapId": "SVK",
+    "mapNumericId": "703",
+    "coordinates": [
+      19.5,
+      48.66666666
+    ]
+  },
+  {
+    "id": "SVN",
+    "name": "Eslovenia",
+    "nameEn": "Slovenia",
+    "capital": "Liubliana",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "SI",
+    "iso3": "SVN",
+    "mapId": "SVN",
+    "mapNumericId": "705",
+    "coordinates": [
+      14.81666666,
+      46.11666666
+    ]
+  },
+  {
+    "id": "SWE",
+    "name": "Suecia",
+    "nameEn": "Sweden",
+    "capital": "Estocolmo",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "SE",
+    "iso3": "SWE",
+    "mapId": "SWE",
+    "mapNumericId": "752",
+    "coordinates": [
+      15,
+      62
+    ]
+  },
+  {
+    "id": "SWZ",
+    "name": "Esuatini",
+    "nameEn": "Eswatini",
+    "capital": "Lobamba",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SZ",
+    "iso3": "SWZ",
+    "mapId": "SWZ",
+    "mapNumericId": "748",
+    "coordinates": [
+      31.5,
+      -26.5
+    ]
+  },
+  {
+    "id": "SYC",
+    "name": "Seychelles",
+    "nameEn": "Seychelles",
+    "capital": "Victoria",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "SC",
+    "iso3": "SYC",
+    "mapId": "SYC",
+    "mapNumericId": "690",
+    "coordinates": [
+      55.66666666,
+      -4.58333333
+    ]
+  },
+  {
+    "id": "SYR",
+    "name": "Siria",
+    "nameEn": "Syria",
+    "capital": "Damasco",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "SY",
+    "iso3": "SYR",
+    "mapId": "SYR",
+    "mapNumericId": "760",
+    "coordinates": [
+      38,
+      35
+    ]
+  },
+  {
+    "id": "TCD",
+    "name": "Chad",
+    "nameEn": "Chad",
+    "capital": "Yamena",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "TD",
+    "iso3": "TCD",
+    "mapId": "TCD",
+    "mapNumericId": "148",
+    "coordinates": [
+      19,
+      15
+    ]
+  },
+  {
+    "id": "TGO",
+    "name": "Togo",
+    "nameEn": "Togo",
+    "capital": "Lomé",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "TG",
+    "iso3": "TGO",
+    "mapId": "TGO",
+    "mapNumericId": "768",
+    "coordinates": [
+      1.16666666,
+      8
+    ]
+  },
+  {
+    "id": "THA",
+    "name": "Tailandia",
+    "nameEn": "Thailand",
+    "capital": "Bangkok",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "TH",
+    "iso3": "THA",
+    "mapId": "THA",
+    "mapNumericId": "764",
+    "coordinates": [
+      100,
+      15
+    ]
+  },
+  {
+    "id": "TJK",
+    "name": "Tayikistán",
+    "nameEn": "Tajikistan",
+    "capital": "Dusambé",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "TJ",
+    "iso3": "TJK",
+    "mapId": "TJK",
+    "mapNumericId": "762",
+    "coordinates": [
+      71,
+      39
+    ]
+  },
+  {
+    "id": "TKM",
+    "name": "Turkmenistán",
+    "nameEn": "Turkmenistan",
+    "capital": "Asjabad",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "TM",
+    "iso3": "TKM",
+    "mapId": "TKM",
+    "mapNumericId": "795",
+    "coordinates": [
+      60,
+      40
+    ]
+  },
+  {
+    "id": "TLS",
+    "name": "Timor-Leste",
+    "nameEn": "Timor-Leste",
+    "capital": "Dili",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "TL",
+    "iso3": "TLS",
+    "mapId": "TLS",
+    "mapNumericId": "626",
+    "coordinates": [
+      125.91666666,
+      -8.83333333
+    ]
+  },
+  {
+    "id": "TON",
+    "name": "Tonga",
+    "nameEn": "Tonga",
+    "capital": "Nukualofa",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "TO",
+    "iso3": "TON",
+    "mapId": "TON",
+    "mapNumericId": "776",
+    "coordinates": [
+      -175,
+      -20
+    ]
+  },
+  {
+    "id": "TTO",
+    "name": "Trinidad y Tobago",
+    "nameEn": "Trinidad and Tobago",
+    "capital": "Puerto España",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "TT",
+    "iso3": "TTO",
+    "mapId": "TTO",
+    "mapNumericId": "780",
+    "coordinates": [
+      -61,
+      11
+    ]
+  },
+  {
+    "id": "TUN",
+    "name": "Túnez",
+    "nameEn": "Tunisia",
+    "capital": "Túnez",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "TN",
+    "iso3": "TUN",
+    "mapId": "TUN",
+    "mapNumericId": "788",
+    "coordinates": [
+      9,
+      34
+    ]
+  },
+  {
+    "id": "TUR",
+    "name": "Turquía",
+    "nameEn": "Türkiye",
+    "capital": "Ankara",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "TR",
+    "iso3": "TUR",
+    "mapId": "TUR",
+    "mapNumericId": "792",
+    "coordinates": [
+      35,
+      39
+    ]
+  },
+  {
+    "id": "TUV",
+    "name": "Tuvalu",
+    "nameEn": "Tuvalu",
+    "capital": "Funafuti",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "TV",
+    "iso3": "TUV",
+    "mapId": "TUV",
+    "mapNumericId": "798",
+    "coordinates": [
+      178,
+      -8
+    ],
+    "mapPointFallback": true
+  },
+  {
+    "id": "TZA",
+    "name": "Tanzania",
+    "nameEn": "Tanzania",
+    "capital": "Dodoma",
+    "capitalAliases": [
+      "Dar es Salaam"
+    ],
+    "capitalNote": "Dodoma es la capital; Dar es Salaam mantiene funciones administrativas y diplomáticas.",
+    "continent": "África",
+    "iso2": "TZ",
+    "iso3": "TZA",
+    "mapId": "TZA",
+    "mapNumericId": "834",
+    "coordinates": [
+      35,
+      -6
+    ]
+  },
+  {
+    "id": "UGA",
+    "name": "Uganda",
+    "nameEn": "Uganda",
+    "capital": "Kampala",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "UG",
+    "iso3": "UGA",
+    "mapId": "UGA",
+    "mapNumericId": "800",
+    "coordinates": [
+      32,
+      1
+    ]
+  },
+  {
+    "id": "UKR",
+    "name": "Ucrania",
+    "nameEn": "Ukraine",
+    "capital": "Kyiv",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "UA",
+    "iso3": "UKR",
+    "mapId": "UKR",
+    "mapNumericId": "804",
+    "coordinates": [
+      32,
+      49
+    ]
+  },
+  {
+    "id": "URY",
+    "name": "Uruguay",
+    "nameEn": "Uruguay",
+    "capital": "Montevideo",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "UY",
+    "iso3": "URY",
+    "mapId": "URY",
+    "mapNumericId": "858",
+    "coordinates": [
+      -56,
+      -33
+    ]
+  },
+  {
+    "id": "USA",
+    "name": "Estados Unidos",
+    "nameEn": "United States",
+    "capital": "Washington D. C.",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "US",
+    "iso3": "USA",
+    "mapId": "USA",
+    "mapNumericId": "840",
+    "coordinates": [
+      -97,
+      38
+    ]
+  },
+  {
+    "id": "UZB",
+    "name": "Uzbekistán",
+    "nameEn": "Uzbekistan",
+    "capital": "Taskent",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "UZ",
+    "iso3": "UZB",
+    "mapId": "UZB",
+    "mapNumericId": "860",
+    "coordinates": [
+      64,
+      41
+    ]
+  },
+  {
+    "id": "VAT",
+    "name": "Ciudad del Vaticano",
+    "nameEn": "Vatican City",
+    "capital": "Ciudad del Vaticano",
+    "capitalAliases": [],
+    "continent": "Europa",
+    "iso2": "VA",
+    "iso3": "VAT",
+    "mapId": "VAT",
+    "mapNumericId": "336",
+    "coordinates": [
+      12.45,
+      41.9
+    ]
+  },
+  {
+    "id": "VCT",
+    "name": "San Vicente y Granadinas",
+    "nameEn": "Saint Vincent and the Grenadines",
+    "capital": "Kingstown",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "VC",
+    "iso3": "VCT",
+    "mapId": "VCT",
+    "mapNumericId": "670",
+    "coordinates": [
+      -61.2,
+      13.25
+    ]
+  },
+  {
+    "id": "VEN",
+    "name": "Venezuela",
+    "nameEn": "Venezuela",
+    "capital": "Caracas",
+    "capitalAliases": [],
+    "continent": "América",
+    "iso2": "VE",
+    "iso3": "VEN",
+    "mapId": "VEN",
+    "mapNumericId": "862",
+    "coordinates": [
+      -66,
+      8
+    ]
+  },
+  {
+    "id": "VNM",
+    "name": "Vietnam",
+    "nameEn": "Vietnam",
+    "capital": "Hanói",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "VN",
+    "iso3": "VNM",
+    "mapId": "VNM",
+    "mapNumericId": "704",
+    "coordinates": [
+      107.83333333,
+      16.16666666
+    ]
+  },
+  {
+    "id": "VUT",
+    "name": "Vanuatu",
+    "nameEn": "Vanuatu",
+    "capital": "Port Vila",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "VU",
+    "iso3": "VUT",
+    "mapId": "VUT",
+    "mapNumericId": "548",
+    "coordinates": [
+      167,
+      -16
+    ]
+  },
+  {
+    "id": "WSM",
+    "name": "Samoa",
+    "nameEn": "Samoa",
+    "capital": "Apia",
+    "capitalAliases": [],
+    "continent": "Oceanía",
+    "iso2": "WS",
+    "iso3": "WSM",
+    "mapId": "WSM",
+    "mapNumericId": "882",
+    "coordinates": [
+      -172.33333333,
+      -13.58333333
+    ]
+  },
+  {
+    "id": "YEM",
+    "name": "Yemen",
+    "nameEn": "Yemen",
+    "capital": "Saná",
+    "capitalAliases": [],
+    "continent": "Asia",
+    "iso2": "YE",
+    "iso3": "YEM",
+    "mapId": "YEM",
+    "mapNumericId": "887",
+    "coordinates": [
+      48,
+      15
+    ]
+  },
+  {
+    "id": "ZAF",
+    "name": "Sudáfrica",
+    "nameEn": "South Africa",
+    "capital": "Pretoria",
+    "capitalAliases": [
+      "Ciudad del Cabo",
+      "Bloemfontein"
+    ],
+    "capitalNote": "Pretoria es la capital ejecutiva; Ciudad del Cabo es legislativa y Bloemfontein judicial.",
+    "continent": "África",
+    "iso2": "ZA",
+    "iso3": "ZAF",
+    "mapId": "ZAF",
+    "mapNumericId": "710",
+    "coordinates": [
+      24,
+      -29
+    ]
+  },
+  {
+    "id": "ZMB",
+    "name": "Zambia",
+    "nameEn": "Zambia",
+    "capital": "Lusaka",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "mapId": "ZMB",
+    "mapNumericId": "894",
+    "coordinates": [
+      30,
+      -15
+    ]
+  },
+  {
+    "id": "ZWE",
+    "name": "Zimbabue",
+    "nameEn": "Zimbabwe",
+    "capital": "Harare",
+    "capitalAliases": [],
+    "continent": "África",
+    "iso2": "ZW",
+    "iso3": "ZWE",
+    "mapId": "ZWE",
+    "mapNumericId": "716",
+    "coordinates": [
+      30,
+      -20
+    ]
+  }
+]

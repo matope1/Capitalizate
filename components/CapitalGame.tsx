@@ -37,8 +37,10 @@ export function CapitalGame() {
   const [selectedChoice, setSelectedChoice] = useState<AnswerChoice | null>(null);
   const [feedback, setFeedback] = useState<"correct" | "incorrect" | null>(null);
   const [questionAttempts, setQuestionAttempts] = useState(0);
+  const questionAttemptsRef = useRef(0);
   const [selectedMapCountryId, setSelectedMapCountryId] = useState<string | null>(null);
   const [answerLocked, setAnswerLocked] = useState(false);
+  const answerLockedRef = useRef(false);
   const advanceTimer = useRef<number | null>(null);
   const [runErrors, setRunErrors] = useState(0);
   const [startedAt, setStartedAt] = useState<number | null>(null);
@@ -52,6 +54,19 @@ export function CapitalGame() {
   const activeCountries = useMemo(() => filterCountries(COUNTRIES, continent), [continent]);
   const completedIds = useMemo(() => new Set(progress.completedIds), [progress.completedIds]);
   const failedIds = useMemo(() => new Set(progress.failedIds), [progress.failedIds]);
+  const concealCurrentMapStatus = currentQuestion?.direction === "country-capital-map" && questionAttempts < 3;
+  const mapCompletedIds = useMemo(() => {
+    if (!concealCurrentMapStatus || !currentCountry || !completedIds.has(currentCountry.id)) return completedIds;
+    const visibleIds = new Set(completedIds);
+    visibleIds.delete(currentCountry.id);
+    return visibleIds;
+  }, [completedIds, concealCurrentMapStatus, currentCountry]);
+  const mapFailedIds = useMemo(() => {
+    if (!concealCurrentMapStatus || !currentCountry || !failedIds.has(currentCountry.id)) return failedIds;
+    const visibleIds = new Set(failedIds);
+    visibleIds.delete(currentCountry.id);
+    return visibleIds;
+  }, [concealCurrentMapStatus, currentCountry, failedIds]);
   const overallProgress = useMemo(() => getProgress(COUNTRIES, completedIds), [completedIds]);
   const isFinished = ready && hasStarted && !currentQuestion;
 
@@ -66,8 +81,10 @@ export function CapitalGame() {
     setSelectedChoice(null);
     setFeedback(null);
     setQuestionAttempts(0);
+    questionAttemptsRef.current = 0;
     setSelectedMapCountryId(null);
     setAnswerLocked(false);
+    answerLockedRef.current = false;
     setRunErrors(0);
     setHasStarted(true);
     const now = Date.now();
@@ -124,8 +141,10 @@ export function CapitalGame() {
     setSelectedChoice(null);
     setSelectedMapCountryId(null);
     setQuestionAttempts(0);
+    questionAttemptsRef.current = 0;
     setFeedback(null);
     setAnswerLocked(false);
+    answerLockedRef.current = false;
   }, []);
 
   const scheduleAdvance = useCallback(() => {
@@ -133,7 +152,7 @@ export function CapitalGame() {
   }, [advanceQuestion]);
 
   const submitAttempt = useCallback((choice: AnswerChoice, mapCountryId?: string) => {
-    if (!currentQuestion || !currentCountry || answerLocked) return;
+    if (!currentQuestion || !currentCountry || answerLockedRef.current) return;
     const capitalOrCountryCorrect = isCorrectAnswer(currentQuestion, currentCountry, choice);
     const mapCorrect = currentQuestion.direction !== "country-capital-map" || mapCountryId === currentCountry.id;
     if (capitalOrCountryCorrect && mapCorrect) {
@@ -141,6 +160,7 @@ export function CapitalGame() {
       setSelectedMapCountryId(mapCountryId ?? null);
       setFeedback("correct");
       setAnswerLocked(true);
+      answerLockedRef.current = true;
       setRunCompleted((previous) => new Set(previous).add(currentCountry.id));
       save({
         ...progress,
@@ -152,11 +172,17 @@ export function CapitalGame() {
       return;
     }
 
-    const attempts = questionAttempts + 1;
+    const attempts = questionAttemptsRef.current + 1;
+    questionAttemptsRef.current = attempts;
     setQuestionAttempts(attempts);
     setRunErrors((errors) => errors + 1);
     setFeedback("incorrect");
-    save({ ...progress, failedIds: [...new Set([...progress.failedIds, currentCountry.id])], errors: progress.errors + 1 });
+    const shouldMarkFailed = currentQuestion.direction !== "country-capital-map" || attempts >= 3;
+    save({
+      ...progress,
+      failedIds: shouldMarkFailed ? [...new Set([...progress.failedIds, currentCountry.id])] : progress.failedIds,
+      errors: progress.errors + 1,
+    });
     if (currentQuestion.direction === "country-capital-map") {
       setSelectedChoice(null);
       setSelectedMapCountryId(null);
@@ -165,19 +191,20 @@ export function CapitalGame() {
     }
     if (attempts >= 3) {
       setAnswerLocked(true);
+      answerLockedRef.current = true;
       scheduleAdvance();
     }
-  }, [answerLocked, currentCountry, currentQuestion, progress, questionAttempts, save, scheduleAdvance]);
+  }, [currentCountry, currentQuestion, progress, save, scheduleAdvance]);
 
   const selectChoice = useCallback((choice: AnswerChoice) => {
-    if (!currentQuestion || !currentCountry || answerLocked) return;
+    if (!currentQuestion || !currentCountry || answerLockedRef.current) return;
     if (currentQuestion.direction === "country-capital-map") {
       setSelectedChoice(choice);
       if (selectedMapCountryId) submitAttempt(choice, selectedMapCountryId);
       return;
     }
     submitAttempt(choice);
-  }, [answerLocked, currentCountry, currentQuestion, selectedMapCountryId, submitAttempt]);
+  }, [currentCountry, currentQuestion, selectedMapCountryId, submitAttempt]);
 
   const choices = useMemo<AnswerChoice[]>(() => {
     if (!currentQuestion) return [];
@@ -205,7 +232,7 @@ export function CapitalGame() {
   }, [activeCountries, currentQuestion]);
 
   const selectMapCountry = (countryId: string) => {
-    if (answerLocked || !currentQuestion) return;
+    if (answerLockedRef.current || !currentQuestion) return;
     const country = COUNTRY_BY_ID.get(countryId);
     if (!country) return;
     if (currentQuestion.direction === "country-capital-map") {
@@ -251,7 +278,7 @@ export function CapitalGame() {
         <div className="game-screen-heading"><div><div className="section-label"><span>03</span> TU PARTIDA</div><p>{MODES.find((item) => item.id === mode)?.label} <i>·</i> {continent}</p></div><span className="round-count">{currentQuestion ? `${runCompleted.size} / ${questions.length} COMPLETADOS` : "RECORRIDO COMPLETADO"}</span></div>
 
         {!isFinished ? <section className="play-layout play-layout-focused" aria-label="Partida">
-          <WorldMap current={currentCountry} completedIds={completedIds} failedIds={failedIds} direction={currentQuestion?.direction} selectedCountryId={selectedMapCountryId} onCountrySelect={(country) => selectMapCountry(country.id)} />
+          <WorldMap current={currentCountry} completedIds={mapCompletedIds} failedIds={mapFailedIds} direction={currentQuestion?.direction} selectedCountryId={selectedMapCountryId} onCountrySelect={(country) => selectMapCountry(country.id)} />
           <div className="map-answer-overlay"><AnswerPicker key={`${questionIndex}-${currentQuestion?.countryId}`} choices={choices} selectedId={selectedChoice?.id ?? null} disabled={answerLocked} onSelect={selectChoice} placeholder={currentQuestion?.direction === "capital-country" ? "Buscar país…" : "Buscar capital…"} /></div>
           <div className="map-question-bar" aria-label="Pregunta actual">
             <div className="map-question-copy"><span className="question-badge"><i/> PREGUNTA {String(questionIndex + 1).padStart(2, "0")} <span className="question-timer">{formatDuration(elapsedSeconds)}</span></span><strong>{currentQuestion?.direction === "capital-country" ? `¿En qué país está ${currentCountry?.capital}?` : currentQuestion?.direction === "country-capital-map" ? `¿Cuál es la capital de ${currentCountry?.name} y dónde está en el mapa?` : `¿Cuál es la capital de ${currentCountry?.name}?`}</strong>{currentQuestion?.direction === "country-capital-map" && <small>Debes acertar la capital y seleccionar el país en el mapa. {selectedChoice ? "Ahora señala el país en el mapa." : "Puedes responder en el orden que prefieras."}</small>}{currentCountry?.capitalNote && <small>Nota: {currentCountry.capitalNote}</small>}</div>

@@ -38,6 +38,10 @@ export function CapitalGame() {
   const [feedback, setFeedback] = useState<"correct" | "incorrect" | null>(null);
   const [questionAttempts, setQuestionAttempts] = useState(0);
   const questionAttemptsRef = useRef(0);
+  const [capitalSolved, setCapitalSolved] = useState(false);
+  const capitalSolvedRef = useRef(false);
+  const [locationSolved, setLocationSolved] = useState(false);
+  const locationSolvedRef = useRef(false);
   const [selectedMapCountryId, setSelectedMapCountryId] = useState<string | null>(null);
   const [answerLocked, setAnswerLocked] = useState(false);
   const answerLockedRef = useRef(false);
@@ -82,6 +86,10 @@ export function CapitalGame() {
     setFeedback(null);
     setQuestionAttempts(0);
     questionAttemptsRef.current = 0;
+    setCapitalSolved(false);
+    capitalSolvedRef.current = false;
+    setLocationSolved(false);
+    locationSolvedRef.current = false;
     setSelectedMapCountryId(null);
     setAnswerLocked(false);
     answerLockedRef.current = false;
@@ -142,6 +150,10 @@ export function CapitalGame() {
     setSelectedMapCountryId(null);
     setQuestionAttempts(0);
     questionAttemptsRef.current = 0;
+    setCapitalSolved(false);
+    capitalSolvedRef.current = false;
+    setLocationSolved(false);
+    locationSolvedRef.current = false;
     setFeedback(null);
     setAnswerLocked(false);
     answerLockedRef.current = false;
@@ -151,27 +163,23 @@ export function CapitalGame() {
     advanceTimer.current = window.setTimeout(advanceQuestion, 650);
   }, [advanceQuestion]);
 
-  const submitAttempt = useCallback((choice: AnswerChoice, mapCountryId?: string) => {
+  const markQuestionCorrect = useCallback(() => {
     if (!currentQuestion || !currentCountry || answerLockedRef.current) return;
-    const capitalOrCountryCorrect = isCorrectAnswer(currentQuestion, currentCountry, choice);
-    const mapCorrect = currentQuestion.direction !== "country-capital-map" || mapCountryId === currentCountry.id;
-    if (capitalOrCountryCorrect && mapCorrect) {
-      setSelectedChoice(choice);
-      setSelectedMapCountryId(mapCountryId ?? null);
-      setFeedback("correct");
-      setAnswerLocked(true);
-      answerLockedRef.current = true;
-      setRunCompleted((previous) => new Set(previous).add(currentCountry.id));
-      save({
-        ...progress,
-        completedIds: [...new Set([...progress.completedIds, currentCountry.id])],
-        failedIds: progress.failedIds.filter((id) => id !== currentCountry.id),
-        correctAnswers: progress.correctAnswers + 1,
-      });
-      scheduleAdvance();
-      return;
-    }
+    setFeedback("correct");
+    setAnswerLocked(true);
+    answerLockedRef.current = true;
+    setRunCompleted((previous) => new Set(previous).add(currentCountry.id));
+    save({
+      ...progress,
+      completedIds: [...new Set([...progress.completedIds, currentCountry.id])],
+      failedIds: progress.failedIds.filter((id) => id !== currentCountry.id),
+      correctAnswers: progress.correctAnswers + 1,
+    });
+    scheduleAdvance();
+  }, [currentCountry, currentQuestion, progress, save, scheduleAdvance]);
 
+  const registerIncorrectAttempt = useCallback(() => {
+    if (!currentQuestion || !currentCountry || answerLockedRef.current) return;
     const attempts = questionAttemptsRef.current + 1;
     questionAttemptsRef.current = attempts;
     setQuestionAttempts(attempts);
@@ -183,12 +191,6 @@ export function CapitalGame() {
       failedIds: shouldMarkFailed ? [...new Set([...progress.failedIds, currentCountry.id])] : progress.failedIds,
       errors: progress.errors + 1,
     });
-    if (currentQuestion.direction === "country-capital-map") {
-      setSelectedChoice(null);
-      setSelectedMapCountryId(null);
-    } else {
-      setSelectedChoice(choice);
-    }
     if (attempts >= 3) {
       setAnswerLocked(true);
       answerLockedRef.current = true;
@@ -196,15 +198,34 @@ export function CapitalGame() {
     }
   }, [currentCountry, currentQuestion, progress, save, scheduleAdvance]);
 
+  const submitAttempt = useCallback((choice: AnswerChoice) => {
+    if (!currentQuestion || !currentCountry || answerLockedRef.current) return;
+    if (isCorrectAnswer(currentQuestion, currentCountry, choice)) {
+      setSelectedChoice(choice);
+      markQuestionCorrect();
+    } else {
+      setSelectedChoice(choice);
+      registerIncorrectAttempt();
+    }
+  }, [currentCountry, currentQuestion, markQuestionCorrect, registerIncorrectAttempt]);
+
   const selectChoice = useCallback((choice: AnswerChoice) => {
     if (!currentQuestion || !currentCountry || answerLockedRef.current) return;
     if (currentQuestion.direction === "country-capital-map") {
+      if (capitalSolvedRef.current) return;
       setSelectedChoice(choice);
-      if (selectedMapCountryId) submitAttempt(choice, selectedMapCountryId);
+      if (isCorrectAnswer(currentQuestion, currentCountry, choice)) {
+        capitalSolvedRef.current = true;
+        setCapitalSolved(true);
+        if (locationSolvedRef.current) markQuestionCorrect();
+        else setFeedback(null);
+      } else {
+        registerIncorrectAttempt();
+      }
       return;
     }
     submitAttempt(choice);
-  }, [currentCountry, currentQuestion, selectedMapCountryId, submitAttempt]);
+  }, [currentCountry, currentQuestion, markQuestionCorrect, registerIncorrectAttempt, submitAttempt]);
 
   const choices = useMemo<AnswerChoice[]>(() => {
     if (!currentQuestion) return [];
@@ -236,8 +257,17 @@ export function CapitalGame() {
     const country = COUNTRY_BY_ID.get(countryId);
     if (!country) return;
     if (currentQuestion.direction === "country-capital-map") {
-      setSelectedMapCountryId(country.id);
-      if (selectedChoice) submitAttempt(selectedChoice, country.id);
+      if (locationSolvedRef.current) return;
+      if (country.id === currentCountry?.id) {
+        locationSolvedRef.current = true;
+        setLocationSolved(true);
+        setSelectedMapCountryId(country.id);
+        if (capitalSolvedRef.current) markQuestionCorrect();
+        else setFeedback(null);
+      } else {
+        setSelectedMapCountryId(null);
+        registerIncorrectAttempt();
+      }
       return;
     }
     selectChoice({ id: country.id, countryId: country.id, value: country.id, label: country.name });
@@ -279,11 +309,11 @@ export function CapitalGame() {
 
         {!isFinished ? <section className="play-layout play-layout-focused" aria-label="Partida">
           <WorldMap current={currentCountry} completedIds={mapCompletedIds} failedIds={mapFailedIds} direction={currentQuestion?.direction} selectedCountryId={selectedMapCountryId} onCountrySelect={(country) => selectMapCountry(country.id)} />
-          <div className="map-answer-overlay"><AnswerPicker key={`${questionIndex}-${currentQuestion?.countryId}`} choices={choices} selectedId={selectedChoice?.id ?? null} disabled={answerLocked} onSelect={selectChoice} placeholder={currentQuestion?.direction === "capital-country" ? "Buscar país…" : "Buscar capital…"} /></div>
+          <div className="map-answer-overlay"><AnswerPicker key={`${questionIndex}-${currentQuestion?.countryId}`} choices={choices} selectedId={selectedChoice?.id ?? null} disabled={answerLocked || (currentQuestion?.direction === "country-capital-map" && capitalSolved)} onSelect={selectChoice} placeholder={currentQuestion?.direction === "capital-country" ? "Buscar país…" : "Buscar capital…"} /></div>
           <div className="map-question-bar" aria-label="Pregunta actual">
-            <div className="map-question-copy"><span className="question-badge"><i/> PREGUNTA {String(questionIndex + 1).padStart(2, "0")} <span className="question-timer">{formatDuration(elapsedSeconds)}</span></span><strong>{currentQuestion?.direction === "capital-country" ? `¿En qué país está ${currentCountry?.capital}?` : currentQuestion?.direction === "country-capital-map" ? `¿Cuál es la capital de ${currentCountry?.name} y dónde está en el mapa?` : `¿Cuál es la capital de ${currentCountry?.name}?`}</strong>{currentQuestion?.direction === "country-capital-map" && <small>Debes acertar la capital y seleccionar el país en el mapa. {selectedChoice ? "Ahora señala el país en el mapa." : "Puedes responder en el orden que prefieras."}</small>}{currentCountry?.capitalNote && <small>Nota: {currentCountry.capitalNote}</small>}</div>
+            <div className="map-question-copy"><span className="question-badge"><i/> PREGUNTA {String(questionIndex + 1).padStart(2, "0")} <span className="question-timer">{formatDuration(elapsedSeconds)}</span></span><strong>{currentQuestion?.direction === "capital-country" ? `¿En qué país está ${currentCountry?.capital}?` : currentQuestion?.direction === "country-capital-map" ? `¿Cuál es la capital de ${currentCountry?.name} y dónde está en el mapa?` : `¿Cuál es la capital de ${currentCountry?.name}?`}</strong>{currentQuestion?.direction === "country-capital-map" && <><small>Debes acertar la capital y seleccionar el país en el mapa.</small><div className="combined-checklist" aria-label="Progreso de esta pregunta"><span className={capitalSolved ? "checklist-item checklist-done" : "checklist-item"} aria-label={capitalSolved ? "Capital correcta" : "Capital pendiente"}><i aria-hidden="true">{capitalSolved ? "✓" : "1"}</i> Capital</span><span className={locationSolved ? "checklist-item checklist-done" : "checklist-item"} aria-label={locationSolved ? "Ubicación correcta" : "Ubicación pendiente"}><i aria-hidden="true">{locationSolved ? "✓" : "2"}</i> Ubicación</span><span className="checklist-attempts">Fallos {questionAttempts}/3</span></div></>}{currentCountry?.capitalNote && <small>Nota: {currentCountry.capitalNote}</small>}</div>
             <div className={`feedback-box feedback-box-compact${feedback ? ` feedback-${feedback}` : " feedback-empty"}`} aria-live="polite" aria-atomic="true">
-              {feedback === "correct" ? <><span className="feedback-symbol">✓</span><span><strong>¡Muy bien!</strong><small>{currentQuestion?.direction === "capital-country" ? currentCountry?.name : currentCountry?.capital} es correcto. Siguiente…</small></span></> : feedback === "incorrect" ? <><span className="feedback-symbol">↻</span><span><strong>{questionAttempts >= 3 ? "Se acabaron los intentos" : `Respuesta incorrecta · intento ${questionAttempts} de 3`}</strong><small>{questionAttempts >= 3 ? "Pasando a la siguiente pregunta…" : currentQuestion?.direction === "country-capital-map" ? `Debes acertar ambas partes. Te quedan ${3 - questionAttempts} ${questionAttempts === 2 ? "intento" : "intentos"}.` : `Vuelve a elegir. Te quedan ${3 - questionAttempts} ${questionAttempts === 2 ? "intento" : "intentos"}.`}</small></span></> : <><span className="feedback-symbol">✳</span><span><strong>Tu turno</strong><small>{currentQuestion?.direction === "country-capital-map" ? "Elige la capital y señala el país en el mapa." : "Elige una respuesta para continuar."}</small></span></>}
+              {feedback === "correct" ? <><span className="feedback-symbol">✓</span><span><strong>¡Muy bien!</strong><small>{currentQuestion?.direction === "capital-country" ? currentCountry?.name : currentCountry?.capital} es correcto. Siguiente…</small></span></> : feedback === "incorrect" ? <><span className="feedback-symbol">↻</span><span><strong>{questionAttempts >= 3 ? "Se acabaron los intentos" : `Respuesta incorrecta · fallo ${questionAttempts} de 3`}</strong><small>{questionAttempts >= 3 ? "País marcado. Pasando a la siguiente pregunta…" : currentQuestion?.direction === "country-capital-map" ? `Fallos entre capital y mapa. Te quedan ${3 - questionAttempts} ${questionAttempts === 2 ? "intento" : "intentos"}.` : `Vuelve a elegir. Te quedan ${3 - questionAttempts} ${questionAttempts === 2 ? "intento" : "intentos"}.`}</small></span></> : <><span className="feedback-symbol">✳</span><span><strong>{currentQuestion?.direction === "country-capital-map" && (capitalSolved || locationSolved) ? "¡Una parte correcta!" : "Tu turno"}</strong><small>{currentQuestion?.direction === "country-capital-map" ? capitalSolved ? `Capital correcta. Ahora selecciona el país. Fallos: ${questionAttempts}/3.` : locationSolved ? `Ubicación correcta. Ahora elige la capital. Fallos: ${questionAttempts}/3.` : "Elige la capital y señala el país en el mapa." : "Elige una respuesta para continuar."}</small></span></>}
             </div>
           </div>
         </section> : <section className="results-card" aria-labelledby="results-title">

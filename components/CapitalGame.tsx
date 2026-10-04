@@ -270,6 +270,7 @@ export function CapitalGame() {
       }
       return;
     }
+    setSelectedMapCountryId(country.id);
     selectChoice({ id: country.id, countryId: country.id, value: country.id, label: country.name });
   };
 

@@ -15,7 +15,21 @@ interface WorldMapProps {
   selectedCountryId?: string | null;
 }
 
-const SMALL_COUNTRY_IDS = new Set(["AND", "LIE", "MCO", "SMR", "VAT", "MLT", "SGP", "BHR"]);
+const PACIFIC_ISLAND_IDS = new Set([
+  "FJI", "FSM", "KIR", "MHL", "NRU", "PLW", "SLB", "TON", "TUV", "VUT", "WSM",
+]);
+const SMALL_COUNTRY_IDS = new Set([
+  "AND", "LIE", "MCO", "SMR", "VAT", "MLT", "SGP", "BHR", "TLS", ...PACIFIC_ISLAND_IDS,
+]);
+const MAP_PROJECTION_WIDTH = 960;
+const MAP_PROJECTION_HEIGHT = 500;
+const MAP_PROJECTION_SCALE = 150;
+const WORLD_WIDTH = 2 * Math.PI * MAP_PROJECTION_SCALE;
+const WORLD_COPY_OFFSETS = [-2, -1, 0, 1, 2];
+
+function normalizeLongitude(longitude: number) {
+  return ((longitude + 180) % 360 + 360) % 360 - 180;
+}
 
 export function WorldMap({ current, completedIds, failedIds, direction, onCountrySelect, selectedCountryId }: WorldMapProps) {
   const hideCurrent = direction === "country-capital-map";
@@ -50,15 +64,19 @@ export function WorldMap({ current, completedIds, failedIds, direction, onCountr
         </div>
       </div>
       <div className="map-canvas">
-        <ComposableMap className="world-map" projection="geoEqualEarth" projectionConfig={{ scale: 154 }} aria-label="Mapa mundial interactivo">
+        <ComposableMap className="world-map" width={MAP_PROJECTION_WIDTH} height={MAP_PROJECTION_HEIGHT} projection="geoEquirectangular" projectionConfig={{ scale: MAP_PROJECTION_SCALE }} aria-label="Mapa mundial interactivo">
           <ZoomableGroup
             center={mapCenter}
             zoom={zoomLevel}
             minZoom={1}
             maxZoom={16}
-            onMoveStart={(_, event) => { if (event.sourceEvent) userGestureRef.current = true; }}
+            onMoveStart={(_, event) => {
+              const sourceEvent = event.sourceEvent;
+              if (!sourceEvent) return;
+              userGestureRef.current = true;
+            }}
             onMove={({ zoom }) => { if (typeof zoom === "number") zoomLevelRef.current = zoom; }}
-            onMoveEnd={({ zoom, coordinates }) => {
+            onMoveEnd={({ zoom, coordinates }, event) => {
               if (!userGestureRef.current) return;
               userGestureRef.current = false;
               setPeekCountry(null);
@@ -66,83 +84,101 @@ export function WorldMap({ current, completedIds, failedIds, direction, onCountr
                 zoomLevelRef.current = zoom;
                 setZoomOverride({ viewKey, zoom });
               }
-              if (coordinates) setCenterOverride({ viewKey, center: coordinates });
+              if (coordinates) {
+                const transformZoom = event.transform.k || zoom || 1;
+                const worldSpan = WORLD_WIDTH * transformZoom;
+                const wrappedX = event.transform.x - Math.round(event.transform.x / worldSpan) * worldSpan;
+                const xOffset = (MAP_PROJECTION_WIDTH * transformZoom - MAP_PROJECTION_WIDTH) / 2;
+                const centerLongitude = normalizeLongitude(-(xOffset + wrappedX) / (transformZoom * MAP_PROJECTION_SCALE) * 180 / Math.PI);
+                setCenterOverride({ viewKey, center: [centerLongitude, coordinates[1]] });
+              }
             }}
           >
-            <Sphere fill="#f5f7f7" stroke="#dfe5e3" strokeWidth={0.5} />
+            {WORLD_COPY_OFFSETS.map((offset) => <g key={`ocean-${offset}`} transform={`translate(${offset * WORLD_WIDTH} 0)`}>
+              <Sphere fill="#f5f7f7" stroke="#dfe5e3" strokeWidth={0.5} />
+            </g>)}
             <Geographies geography="/countries-50m.json">
-              {({ geographies }) => geographies.map((geography) => {
-                const { country, isCurrent, isComplete, hasFailed } = getMapCountryState(
-                  String(geography.id ?? ""), mapCurrent?.id, completedIds, failedIds,
-                );
-                const isSelected = country?.id === selectedCountryId;
-                return (
-                  <Geography
-                    key={geography.rsmKey}
-                    geography={geography}
-                    aria-label={country ? `${country.name}${isCurrent ? ", país actual" : ""}${isComplete ? ", completado" : ""}` : String(geography.properties?.name ?? "País")}
-                    role={country ? "button" : undefined}
-                    tabIndex={country ? 0 : -1}
-                    onMouseEnter={() => country && !userGestureRef.current && setPeekCountry(country)}
+              {({ geographies }) => <>
+                {WORLD_COPY_OFFSETS.map((offset) => <g key={`countries-${offset}`} aria-hidden={offset !== 0 || undefined} transform={`translate(${offset * WORLD_WIDTH} 0)`}>
+                  {geographies.map((geography) => {
+                    const { country, isCurrent, isComplete, hasFailed } = getMapCountryState(
+                      String(geography.id ?? ""), mapCurrent?.id, completedIds, failedIds,
+                    );
+                    const isSelected = country?.id === selectedCountryId;
+                    return (
+                      <Geography
+                        key={geography.rsmKey}
+                        geography={geography}
+                        aria-label={offset === 0 ? country ? `${country.name}${isCurrent ? ", país actual" : ""}${isComplete ? ", completado" : ""}` : String(geography.properties?.name ?? "País") : undefined}
+                        role={country && offset === 0 ? "button" : undefined}
+                        tabIndex={country && offset === 0 ? 0 : -1}
+                        onMouseEnter={() => country && !userGestureRef.current && setPeekCountry(country)}
+                        onMouseLeave={() => !userGestureRef.current && setPeekCountry(null)}
+                        onFocus={() => country && setPeekCountry(country)}
+                        onBlur={() => setPeekCountry(null)}
+                        onClick={() => {
+                          if (!country) return;
+                          if (direction === "capital-country" || direction === "country-capital-map") onCountrySelect?.(country);
+                          else setPeekCountry(country);
+                        }}
+                        onKeyDown={(event) => {
+                          if (country && (event.key === "Enter" || event.key === " ")) {
+                            event.preventDefault();
+                            if (direction === "capital-country" || direction === "country-capital-map") onCountrySelect?.(country);
+                            else setPeekCountry(country);
+                          }
+                        }}
+                        className={`${isCurrent ? "country-current" : ""}${isComplete ? " country-complete" : ""}${hasFailed ? " country-failed" : ""}${isSelected ? " country-choice" : ""}`}
+                        fill={isCurrent ? "#ed8c4f" : isSelected ? "#b9a6d5" : isComplete ? "#97cfc1" : hasFailed ? "#f4c0ab" : "#e4e9e6"}
+                        stroke={isCurrent ? "#c46032" : isSelected ? "#715797" : isComplete ? "#78b3a4" : "#ffffff"}
+                        strokeWidth={isCurrent || isSelected ? 1.45 : isComplete ? 0.75 : 0.55}
+                        strokeDasharray={isComplete ? "2 1" : undefined}
+                        style={{ cursor: country && (direction === "capital-country" || direction === "country-capital-map") ? "pointer" : "default" }}
+                      />
+                    );
+                  })}
+                </g>)}
+              </>}
+            </Geographies>
+            {WORLD_COPY_OFFSETS.map((offset) => <g key={`markers-${offset}`} aria-hidden={offset !== 0 || undefined} transform={`translate(${offset * WORLD_WIDTH} 0)`}>
+              {mapCurrent?.mapPointFallback && <Marker coordinates={mapCurrent.coordinates}>
+                <circle r={4.6 / zoomLevel} fill="#ed8c4f" stroke="#fff" strokeWidth={1.3} />
+                <circle r={8 / zoomLevel} fill="none" stroke="#c46032" strokeWidth={0.7} />
+              </Marker>}
+              {Array.from(SMALL_COUNTRY_IDS, (id) => {
+                const country = COUNTRY_BY_ID.get(id);
+                if (!country) return null;
+                const isCurrent = mapCurrent?.id === id;
+                const isPeeked = peekCountry?.id === id;
+                const isSelected = selectedCountryId === id;
+                const isPacificIsland = PACIFIC_ISLAND_IDS.has(id);
+                const radius = (isCurrent || isPeeked || isSelected ? isPacificIsland ? 6 : 3.6 : isPacificIsland ? 4.5 : 2.2) / zoomLevel;
+                return <Marker key={`small-${id}`} coordinates={country.coordinates}>
+                  <circle
+                    className="small-country-marker"
+                    r={radius}
+                    fill={isCurrent ? "#ed8c4f" : isSelected ? "#b9a6d5" : isPeeked ? "#d18b62" : "#668d78"}
+                    stroke={isSelected ? "#715797" : "#fff"}
+                    strokeWidth={(isSelected ? 2 : 1.25) / zoomLevel}
+                    role={offset === 0 ? "button" : undefined}
+                    tabIndex={offset === 0 ? 0 : -1}
+                    aria-label={offset === 0 ? country.name : undefined}
+                    onMouseEnter={() => !userGestureRef.current && setPeekCountry(country)}
                     onMouseLeave={() => !userGestureRef.current && setPeekCountry(null)}
-                    onFocus={() => country && setPeekCountry(country)}
+                    onFocus={() => setPeekCountry(country)}
                     onBlur={() => setPeekCountry(null)}
-                    onClick={() => {
-                      if (!country) return;
-                      if (direction === "capital-country" || direction === "country-capital-map") onCountrySelect?.(country);
-                      else setPeekCountry(country);
-                    }}
+                    onClick={() => (direction === "capital-country" || direction === "country-capital-map") && onCountrySelect?.(country)}
                     onKeyDown={(event) => {
-                      if (country && (event.key === "Enter" || event.key === " ")) {
+                      if (event.key === "Enter" || event.key === " ") {
                         event.preventDefault();
                         if (direction === "capital-country" || direction === "country-capital-map") onCountrySelect?.(country);
                         else setPeekCountry(country);
                       }
                     }}
-                    className={`${isCurrent ? "country-current" : ""}${isComplete ? " country-complete" : ""}${hasFailed ? " country-failed" : ""}${isSelected ? " country-choice" : ""}`}
-                    fill={isCurrent ? "#ed8c4f" : isSelected ? "#b9a6d5" : isComplete ? "#97cfc1" : hasFailed ? "#f4c0ab" : "#e4e9e6"}
-                    stroke={isCurrent ? "#c46032" : isSelected ? "#715797" : isComplete ? "#78b3a4" : "#ffffff"}
-                    strokeWidth={isCurrent || isSelected ? 1.45 : isComplete ? 0.75 : 0.55}
-                    strokeDasharray={isComplete ? "2 1" : undefined}
-                    style={{ cursor: country && (direction === "capital-country" || direction === "country-capital-map") ? "pointer" : "default" }}
                   />
-                );
+                </Marker>;
               })}
-            </Geographies>
-            {mapCurrent?.mapPointFallback && <Marker coordinates={mapCurrent.coordinates}>
-              <circle r={4.6 / zoomLevel} fill="#ed8c4f" stroke="#fff" strokeWidth={1.3} />
-              <circle r={8 / zoomLevel} fill="none" stroke="#c46032" strokeWidth={0.7} />
-            </Marker>}
-            {Array.from(SMALL_COUNTRY_IDS, (id) => {
-              const country = COUNTRY_BY_ID.get(id);
-              if (!country) return null;
-              const isCurrent = mapCurrent?.id === id;
-              const isPeeked = peekCountry?.id === id;
-              return <Marker key={`small-${id}`} coordinates={country.coordinates}>
-                <circle
-                  className="small-country-marker"
-                  r={(isCurrent || isPeeked ? 3.6 : 2.2) / zoomLevel}
-                  fill={isCurrent ? "#ed8c4f" : selectedCountryId === id ? "#b9a6d5" : isPeeked ? "#d18b62" : "#668d78"}
-                  stroke={selectedCountryId === id ? "#715797" : "#fff"}
-                  strokeWidth={(selectedCountryId === id ? 2 : 1.25) / zoomLevel}
-                  role="button"
-                  tabIndex={0}
-                  aria-label={country.name}
-                  onMouseEnter={() => !userGestureRef.current && setPeekCountry(country)}
-                  onMouseLeave={() => !userGestureRef.current && setPeekCountry(null)}
-                  onFocus={() => setPeekCountry(country)}
-                  onBlur={() => setPeekCountry(null)}
-                  onClick={() => (direction === "capital-country" || direction === "country-capital-map") && onCountrySelect?.(country)}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter" || event.key === " ") {
-                      event.preventDefault();
-                      if (direction === "capital-country" || direction === "country-capital-map") onCountrySelect?.(country);
-                      else setPeekCountry(country);
-                    }
-                  }}
-                />
-              </Marker>;
-            })}
+            </g>)}
           </ZoomableGroup>
         </ComposableMap>
         {current && !hideCurrent && <div className="map-callout"><span className="map-callout-icon">⌖</span><span>{peekCountry?.name ?? current.name}</span><span className="map-callout-label">{peekCountry?.id === current.id ? "PAÍS ACTUAL" : peekCountry ? "EXPLORANDO" : "PAÍS ACTUAL"}</span></div>}

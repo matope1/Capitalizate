@@ -51,6 +51,16 @@ describe("catálogo mundial", () => {
     expect(state.isComplete).toBe(false);
   });
 
+  it("asocia Timor-Leste con su geometría y valida su selección en el mapa", () => {
+    const timorLeste = COUNTRY_BY_ID.get("TLS")!;
+    const state = getMapCountryState("626", "TLS", new Set(), new Set());
+    const question: Question = { countryId: "TLS", direction: "capital-country" };
+
+    expect(state.country?.id).toBe("TLS");
+    expect(state.isCurrent).toBe(true);
+    expect(isCorrectAnswer(question, timorLeste, { countryId: "TLS", value: "TLS" })).toBe(true);
+  });
+
   it("no marca Groenlandia ni la Antártida como país actual si no tienen país asociado", () => {
     const greenland = getMapCountryState("304", undefined, new Set(), new Set());
     const antarctica = getMapCountryState("010", undefined, new Set(), new Set());
